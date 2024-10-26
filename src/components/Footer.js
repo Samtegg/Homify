@@ -1,10 +1,12 @@
 import React from 'react'
+import '../index.css'
+import Logo from '../assets/logo.png'
 
 const Footer = () => {
   return (
     <div className="footer">
     <div className="first-footer">
-        <img className="logo" src="./assets/logo.png" alt="Homify Logo" />
+        <img className="logo" src={Logo} alt="" />
         <nav className="footer-nav">
             <ul>
                 <li><a href="#home">Home</a></li>
