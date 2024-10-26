@@ -1,6 +1,7 @@
 import React from 'react'
 import '../index.css'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const LandingPage = () => {
   return (
@@ -136,20 +137,7 @@ const LandingPage = () => {
         </div>
     </div>
 
-    {/* Footer */}
-    <footer>
-        <div className="footer-container">
-            <div className="footer-logo">
-                <img src="./assets/logo.png" alt="Homify Logo" />
-            </div>
-            <div className="footer-links">
-                <a href="#home">Home</a>
-                <a href="#services">Services</a>
-                <a href="#features">Features</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </footer>
+   <Footer />
 </div>
   )
 }
