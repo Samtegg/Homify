@@ -116,6 +116,8 @@ margin: 0 10px;
     color: #00985B;
     padding: 5px 10px;
     border-radius: 2px;
+    font-weight: 500;
+    font-family: Poppins;
 }
 
 .reg:hover, .login:hover {
@@ -179,6 +181,8 @@ margin: 0 10px;
     line-height: 72px;
     text-align: left;
     margin-top: 50px;
+    color: #fff;
+
 }
 .homify-herosection > p {
     font-family: Poppins;
@@ -187,6 +191,8 @@ margin: 0 10px;
     line-height: 34px;
     text-align: left;
     margin-top: 20px;
+    color: #fff;
+
 }
 
 .hero-buttoncontainer {
@@ -1504,17 +1510,7 @@ screen and (max-width: 768px) and (orientation: landscape) {
 	text-align: left;
 	margin: 0 10px;
 }
-.login {
-    background-color: #fff;
-    color: #00985B;
-    padding: 5px 10px;
-    border-radius: 2px;
-}
 
-.reg:hover, .login:hover {
-    /* background-color: #11d184; */
-    color: #00985B;
-}
 
 h1, h2 {
 	margin: 0;

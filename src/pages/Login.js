@@ -1,8 +1,16 @@
 import React from 'react'
 import '../index.css'
 import Logo from '../assets/logo.png'
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  function goToNextPage(){
+    navigate('/dashboard')
+  }
   return (
     <div className="login-container">
     <div className="logo-container">
@@ -28,7 +36,7 @@ const Login = () => {
           <div className="forgot-password">
             <a href="#" id="forgotPassword">Forgot Password?</a>
           </div>
-          <button type="submit" id="sign-in" onclick="window.location.href='../user-dashboard/userdash.html'">Sign In</button>
+          <button onClick={goToNextPage} type="submit" id="sign-in" onclick="window.location.href='../user-dashboard/userdash.html'">Sign In</button>
           <div className="or-divider">
             <span>OR</span>
           </div>
@@ -36,7 +44,10 @@ const Login = () => {
             <button type="button" className="social-btn google-btn">Sign in with Google</button>
             <button type="button" className="social-btn facebook-btn">Sign in with Facebook</button>
           </div>
-          <p className="message">Don't have an account? <a href="../register/register.html">Register</a></p>
+          <Link to='/register'>
+            <p className="message">Don't have an account? <a href="../register/register.html">Register</a></p>
+          </Link>
+  
         </form>
       </div>
 

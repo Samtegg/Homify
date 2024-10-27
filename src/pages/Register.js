@@ -1,7 +1,15 @@
 import React from 'react'
 import Logo from '../assets/logo.png'
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+  const navigate = useNavigate();
+
+  function goToNextPage(){
+    navigate('/dashboard')
+  }
+
   return (
     <div className="register-container">
     <div className="logo-container">
@@ -43,12 +51,14 @@ const Register = () => {
               <option value="agent">Agent</option>
             </select>
           </div>
-          <button type="submit" id="register-btn">Register</button>
+          <button onClick={goToNextPage} type="submit" id="register-btn">Register</button>
           <div className="social-login">
             <button type="button" className="social-btn google-btn">Register with Google</button>
             <button type="button" className="social-btn facebook-btn">Register with Facebook</button>
           </div>
-          <p className="message">Already have an account? <a href="../login-signup/login.html">Sign In</a></p>
+          <Link to='/login'>
+            <p className="message">Already have an account? <a href="../login-signup/login.html">Sign In</a></p>
+          </Link>
         </form>
       </div>
     </div>
