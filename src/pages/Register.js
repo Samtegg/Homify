@@ -3,7 +3,7 @@ import Logo from '../assets/logo.png'
 
 const Register = () => {
   return (
-    <div className="container">
+    <div className="register-container">
     <div className="logo-container">
       <a href="../index.html"><img src={Logo} alt="Homify Logo" className="logo" /></a>
     </div>
