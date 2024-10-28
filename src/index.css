@@ -39,8 +39,8 @@ html {
 
 body{
     width: 100%;
+    color: #fff;
 
-   
 }
 
 .homify-container {
@@ -69,7 +69,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 5px 15px;
     background: linear-gradient(112.9deg, #048853 0.98%, rgba(0, 0, 0, 0.84) 165.36%);
     position: fixed;
     top: 0;
@@ -97,7 +97,6 @@ margin: 0 10px;
     gap: 10px;
     align-items: center;
     transition: color 0.3s, transform 0.3s;
-    color: #fff;
 }
 
 .first-nav > li > a:hover{
@@ -109,20 +108,23 @@ margin: 0 10px;
     background-color: transparent;
     color: #fff;
     padding: 5px 10px;
-    border-radius: 2px;
+    border-radius: 3px;
+    transition: transform 0.2s ease;
 }
 .login {
     background-color: #fff;
     color: #00985B;
     padding: 5px 10px;
-    border-radius: 2px;
-    font-weight: 500;
-    font-family: Poppins;
+    margin-right: 35px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-family: Poppins !important;
 }
 
 .reg:hover, .login:hover {
     /* background-color: #11d184; */
-    background-color: #f2fff3;
+    /* background-color: #f2fff3; */
+    background-color: #F3FFF4;
     color: #00985B;
 }
 
@@ -198,6 +200,7 @@ margin: 0 10px;
 .hero-buttoncontainer {
     display: flex;
     margin-top: 30px;
+    
 }
 
 .hero-button {
@@ -205,6 +208,15 @@ margin: 0 10px;
     padding: 10px 20px;
     border: 0;
     border-radius: 5px;
+    font-weight: 300px;
+    font-family: Poppins;
+}
+
+.hero-button:hover {
+    background-color: #F3FFF4;
+    border-radius: 5px;
+    /* border: 1px solid #0ee68f; */
+    font-family: Poppins;
 }
 
 
@@ -372,9 +384,10 @@ color: #fff;
     padding: 5px 20px;
     background: #FFFFFF99;
     border: green;
-    border-radius: 2px;
+    border-radius: 3px;
     cursor: pointer;
     color: #000; 
+    font-family: Poppins, sans-serif;
 }
 .navigate-options > p.active {
     background-color: #00985B;
@@ -385,7 +398,7 @@ color: #fff;
     background-color: #048853;
     color: #FFFFFF;
     border: 2px solid #FFFFFF;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 
