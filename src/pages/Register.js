@@ -13,7 +13,9 @@ const Register = () => {
   return (
     <div className="login-reg-container">
     <div className="logo-container">
-      <a href="../index.html"><img src={Logo} alt="Homify Logo" className="logo" /></a>
+      <Link to='/'>
+        <a href=""><img src={Logo} alt="Homify Logo" className="logo" /></a>
+      </Link>
     </div>
     <div className="content-wrapper">
       <h2>Simplify house hunting today.</h2>
@@ -57,7 +59,7 @@ const Register = () => {
             <button type="button" className="social-btn facebook-btn">Register with Facebook</button>
           </div>
           <Link to='/login'>
-            <p className="message">Already have an account? <a href="../login-signup/login.html">Sign In</a></p>
+            <p className="message">Already have an account? <a href="">Sign In</a></p>
           </Link>
         </form>
       </div>

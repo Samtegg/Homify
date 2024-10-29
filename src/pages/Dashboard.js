@@ -10,8 +10,8 @@ import Recommendation6 from '../assets/recommendation6.png'
 import Minibedicon from '../assets/mini-bed-icon.png'
 import Bathicon from '../assets/bath-icon.png'
 import Houseareaicon from '../assets/house-area-icon.png'
-import DashboardHeader from '../components/DashboardHeader'
-import Footer from '../components/Footer'
+import DashboardHeader from '../components/DashboardHeader.js'
+import Footer from '../components/Footer.js'
 
 
 

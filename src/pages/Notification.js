@@ -1,7 +1,7 @@
 import React from 'react'
-import NotificationComp from '../components/NotificationComp'
-import DashboardHeader from '../components/DashboardHeader'
-import Footer from '../components/Footer'
+import NotificationComp from '../components/NotificationComp.js'
+import DashboardHeader from '../components/DashboardHeader.js'
+import Footer from '../components/Footer.js'
 
 const Notification = () => {
   return (
