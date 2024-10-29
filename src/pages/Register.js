@@ -11,7 +11,7 @@ const Register = () => {
   }
 
   return (
-    <div className="register-container">
+    <div className="login-reg-container">
     <div className="logo-container">
       <a href="../index.html"><img src={Logo} alt="Homify Logo" className="logo" /></a>
     </div>
