@@ -415,43 +415,51 @@ color: #fff;
     margin-top: 40px;
 }
 .recommendation-container > h2{
-    font-family: Poppins;
+    font-family: Poppins, sans-serif;
     font-size: 48px;
     font-weight: 600;
     line-height: 72px;
     text-align: center;
     color: #048853;
+    margin-bottom: 15px;
 }
 
+/* starts */
 .recommendation-searchcontaiiner {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 5px 30px;
+    padding: 5px 50px !important;
+    gap: 5px;
 }
 .recommendation-search {
     display: flex;
-    width: 400px;
+    height: 42px;
+    /* width: 700px; */
 }
 .recommendation-search > input {
     width: 100%;
-    height: 20px;
-    padding: 15px 10px;
-    border: 1px solid #434242;
+    height: 100% !important;
+    padding: 15px 30px;
+    margin-top: 0;
+    border-radius: 0;
+    /* border: 1px solid #434242 !important; */
 }
 .recommendation-search > button { 
     background-color: #00985B;
-    /* color: #FFFFFF; */
-    height: 33px;
-    border: 0;
-    border: 1px solid #434242;
-    border-radius: 0 2px 2px 0;
-    width: 60px;
+    color: #FFFFFF;
+    height: 100% !important;
+    width: 100px !important;
+    border-radius: 0;
+    /* border: 1px solid #434242 !important; */
+    /* border-radius: 0 2px 2px 0; */
+    
 }
 
 .recommendation-filter {
     display: flex;
     gap: 15px;
+    /* border: 2px solid red; */
 }
 .house-filter {
     display: flex;
@@ -485,6 +493,8 @@ color: #00985B;
 .house-filter:hover > p {
     color: #FFFFFF;
 }
+
+/* Ends */
 
 .recommendation-secondcontainer {
     display: grid;
@@ -798,6 +808,34 @@ text-align: left;
 /* --- Mobile Responsive Styles --- */
 @media screen and (min-width: 320px) and (max-width: 768px), 
 screen and (max-width: 768px) and (orientation: landscape) {
+
+   
+        .toggle-button {
+          display: block;
+        }
+
+        .first-nav, .second-nav {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: linear-gradient(112.9deg, #048853 0.98%, rgba(0, 0, 0, 0.84) 165.36%);
+          padding: 20px 0;
+        }
+
+        .first-nav.active, .second-nav.active {
+          display: flex;
+        }
+
+        .first-nav li, .second-nav li {
+          margin: 10px 0;
+          text-align: center;
+        }
+
+
+
 
     .homify-nav{
         flex-direction: column;
