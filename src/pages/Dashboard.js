@@ -19,7 +19,7 @@ const Dashboard = () => {
   return (
     <div className='dashboard-container'>
         <DashboardHeader />
-            <div class="homify-recommendation margin-top2" id="recommendation">
+            <div class="homify-recommendation margin-top2 dashcontainer-child " id="recommendation">
                 <div class="recommendation-container">
                     <h2>House Recommendations for You</h2>
                     <div class="recommendation-searchcontaiiner">

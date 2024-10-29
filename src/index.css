@@ -1393,8 +1393,22 @@ screen and (max-width: 768px) and (orientation: landscape) {
 
 
   /* ----- Dashboard Styles ----- */
-  .margin-top{
-    margin-top: 80px;
+
+  .dashboard-container{
+    /* max-width: 1200px; 
+    margin: 0 auto;
+	padding: 20px;
+	margin-top: 40px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(./assets/first-background.png);
+    background-color: #F3FFF4
+  }
+
+  .dashcontainer-child {
+    max-width: 80%;
   }
 
   .dash-anchor  {
@@ -1409,6 +1423,9 @@ screen and (max-width: 768px) and (orientation: landscape) {
     padding: 0 3px;
 	margin: 0 -10px;
 }
+.dash-anchor:hover {
+    color: #0ee68f;
+}
 
 .account-img{
 	width: auto;
@@ -1418,16 +1435,13 @@ screen and (max-width: 768px) and (orientation: landscape) {
     filter: invert(1);
 }
 
-.dash-anchor:hover {
-    color: #0ee68f;
-}
 /* .dash-anchor:hover .acc-img1 {
     filter: brightness(0) saturate(100%) invert(57%) sepia(77%) saturate(579%) hue-rotate(74deg) brightness(97%) contrast(91%);
 } */
 
 
 
-
+/* User Profile*/
 .user-overview {
 	background-color: var(--white);
 	border-radius: 8px;
@@ -1583,249 +1597,6 @@ screen and (max-width: 768px) and (orientation: landscape) {
 .account-img{
 	width: auto;
 	height: 15px;
-}
-
-/* Recommendation */
-
-.homify-recommendation{
-    display: flex;
-    flex-direction: column; 
-    background-color: #F3FFF4;
-}
-
-.recommendation-container {
-    display: flex;
-    flex-direction: column; 
-    margin-top: 40px;
-}
-.recommendation-container > h2{
-    font-family: Poppins;
-    font-size: 48px;
-    font-weight: 600;
-    line-height: 72px;
-    text-align: center;
-    color: #048853;
-}
-
-.recommendation-searchcontaiiner {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 5px 30px;
-}
-.recommendation-search {
-    display: flex;
-    width: 400px;
-}
-.recommendation-search > input {
-    width: 100%;
-    height: 20px;
-    padding: 15px 10px;
-    border: 1px solid #434242;
-}
-.recommendation-search > button { 
-    background-color: #00985B;
-    /* color: #FFFFFF; */
-    height: 33px;
-    border: 0;
-    border: 1px solid #434242;
-    border-radius: 0 2px 2px 0;
-    width: 60px;
-}
-
-.recommendation-filter {
-    display: flex;
-    gap: 15px;
-}
-.house-filter {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background: #FFFFFFCC;
-    margin-bottom: 90px;
-    border: 1px solid #000;
-    padding: 5px 10px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.house-filter > img {
-    width: auto;
-    height: 20px;
-}
-.house-filter > p {
-    font-family: Poppins;
-font-size: 18px;
-font-weight: 400;
-line-height: 27px;
-text-align: center;
-color: #00985B;
-}
-.house-filter:hover {
-    background-color: #00985B;
-    color: #FFFFFF;
-    /* background-color: rgba(0, 152, 91, 0.2); * A very faint green *
-    color: #FFFFFF; */
-}
-.house-filter:hover > p {
-    color: #FFFFFF;
-}
-
-.recommendation-secondcontainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: #F3FFF4;
-    row-gap: 35px;
-}
-
-.recommendation-card {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: flex-start;
-    background-color: #fff;
-    justify-self: center;
-    padding: 15px;
-}
-.recommendation-card:hover {
-    background: linear-gradient(150.86deg, #00985B -2.67%, #00985B 56.48%, #000000 113.25%);
-    color: #fff;
-    transform: scale(1.1);
-}
-.recommendation-card > img {
-    width: 351.16px;
-    height: 280px;  
-}
-.recommendation-carddetails{
-    display: flex;
-    flex-direction: column; 
-    margin-bottom: 19px;
-}
-.recommendation-carddetails > h4{
-    font-family: Poppins;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 36px;
-    text-align: left;
-    color: #000;
-}
-.recommendation-carddetails > p{
-    font-family: Poppins;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    text-align: left;
-    color: #000;
-}
-
-.inner-carddetails{
-    display: flex;
-    gap: 30px;
-}
-.innerdetails-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.innerdetails-content > p{
-    font-family: Poppins;
-font-size: 12px;
-font-weight: 400;
-line-height: 18px;
-text-align: center;
-color: #000;
-}
-
-.innerdetails-image {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5px; 
-}
-.innerdetails-image > img {
-    width: 15px;
-    height: 15px;
-}
-.innerdetails-image > p{
-    font-family: Poppins;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 21px;
-    text-align: center;
-    color: #000;
-}
-
-.loadmore {
-    display: flex;
-    justify-content: center;
-}
-.loadmore > p {
-    font-family: Poppins;
-font-size: 18px;
-font-weight: 400;
-line-height: 27px;
-text-align: center;
-color: #000;
-margin: 50px 0;
-}
-.loadmore > p:hover {
-    color: #00985B;
-    cursor: pointer;
-}
-
-
-@media screen and (max-width: 768px) {
-    .toggle-button {
-        display: flex;
-    }
-
-    .container {
-        flex-direction: column;
-    }
-
-    .recommendation-searchcontaiiner {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .second-nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: var(--dark-green);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 20px;
-    }
-
-    .second-nav.active {
-        display: flex;
-    }
-
-    .second-nav li {
-        margin: 10px 0;
-    }
-
-    .recommendation-searchcontainer {
-        flex-direction: column;
-    }
-
-    .recommendation-search {
-        margin-bottom: 10px;
-    }
-
-    .recommendation-filter {
-        justify-content: space-between;
-    }
-
-    .house-filter {
-        flex: 1;
-    }
-
-    .recommendation-secondcontainer {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Personal Properties */
