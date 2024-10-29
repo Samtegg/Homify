@@ -11,12 +11,17 @@ const Login = () => {
   const navigate = useNavigate();
   const serverUrl = 'http://localhost:5000/api/signin';
 
-  const [formData, setFormData] = useState({email: '', password: ''})
+  const [formData, setFormData] = useState({
+    email: '',
+    password: ''
+  })
 
   const handleChange = (e) => {
    
     const {name, value} = e.target;
-    setFormData({...formData, [name]: value})
+    setFormData({...formData, [name]: value});
+    console.log('this is formdata', formData);
+    
 
   }
 
@@ -58,11 +63,11 @@ const Login = () => {
         <form id="signinForm" onSubmit={handleSubmit}>
           <div className="input-group">
             <label for="email">Email</label>
-            <input onChange={handleChange} type="email" id="email" required />
+            <input onChange={handleChange} name='email' type="email" id="email" required />
           </div>
           <div className="input-group">
             <label for="password">Password</label>
-            <input onChange={handleChange} type="password" id="password" required />
+            <input onChange={handleChange} type="password" name='password' id="password" required />
           </div>
           <div className="forgot-password">
             <a href="#" id="forgotPassword">Forgot Password?</a>

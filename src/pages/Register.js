@@ -25,7 +25,8 @@ const Register = () => {
 
   const handleChange = (e) => {
     const {name, value} = e.target;
-    setFormData({ ...formData, [name]: value})
+    setFormData({ ...formData, [name]: value});
+    console.log('this is formdata', formData);
   };
 
   const handleSubmit = async (e) => {
