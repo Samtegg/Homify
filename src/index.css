@@ -1102,7 +1102,7 @@ screen and (max-width: 768px) and (orientation: landscape) {
 
 
 
-/* ----- Login  and Register----- */
+/* ----- Login  and Register Styles----- */
 
   .forgot-password {
 	text-align: right;
@@ -1375,7 +1375,7 @@ screen and (max-width: 768px) and (orientation: landscape) {
 
 
 
-  /* Dashboard css */
+  /* ----- Dashboard Styles ----- */
   .margin-top{
     margin-top: 80px;
   }
