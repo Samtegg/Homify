@@ -15,35 +15,35 @@ const DashboardHeader = () => {
   return (
     <header>
 
-        <nav class="homify-nav" id="nav-bar">
+        <nav className="homify-nav" id="nav-bar">
             <Link to='/dashboard'>
-              <a href=""><img class="logo" src={Logo} alt="Homify Logo" /></a>
+              <a href=""><img className="logo" src={Logo} alt="Homify Logo" /></a>
             </Link>
 
-            <a href="#" class="toggle-button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <a href="#" className="toggle-button">
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
             </a>
            
-            <ul class="second-nav">
+            <ul className="second-nav">
                 <Link to='/myproperties'>
-                  <li class="reg"><a class="dash-anchor" href="./myproperties.html">MY PROPERTIES</a></li>
+                  <li className="reg"><a className="dash-anchor" href="./myproperties.html">MY PROPERTIES</a></li>
                 </Link> 
                 <Link to='/topListing'>
-                  <li class="reg"><a class="dash-anchor" href="./toplistings.html">TOP LISTINGS</a></li>
+                  <li className="reg"><a className="dash-anchor" href="./toplistings.html">TOP LISTINGS</a></li>
                 </Link> 
                 <Link to='/profile'>
-                  <li class="reg">
-                    <a class="dash-anchor" href="./myprofile.html">
-                      <img src={Accountimg} alt="" class="account-img" />
+                  <li className="reg">
+                    <a className="dash-anchor" href="./myprofile.html">
+                      <img src={Accountimg} alt="" className="account-img acc-img1" />
                     </a>
                   </li>
                 </Link> 
                 <Link to='/notification'>
-                  <li class="reg">
-                    <a class="dash-anchor" href="./notification.html">
-                      <img src={Active} alt="" class="account-img"/>
+                  <li className="reg">
+                    <a className="dash-anchor" href="./notification.html">
+                      <img src={Active} alt="" className="account-img acc-img2"/>
                     </a>
                   </li>
                 </Link> 
@@ -60,4 +60,4 @@ const DashboardHeader = () => {
   )
 }
 
-export default DashboardHeader
+export default DashboardHeader;

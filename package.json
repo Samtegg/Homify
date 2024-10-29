@@ -27,7 +27,6 @@
     "server": "nodemon backend/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-
     "eject": "react-scripts eject"
   },
   "type": "module",
@@ -50,6 +49,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-transform-private-property-in-object": "^7.25.9",
     "concurrently": "^9.0.1"
   }
 }
