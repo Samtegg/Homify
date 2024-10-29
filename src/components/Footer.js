@@ -18,7 +18,7 @@ const Footer = () => {
         </nav>
     </div>
     <p>Copyright Homily All Right Reserved.</p>
-</div>
+  </div>
   )
 }
 

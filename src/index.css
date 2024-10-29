@@ -429,7 +429,7 @@ color: #fff;
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 5px 50px !important;
+    padding: 5px 100px !important;
     gap: 5px;
 }
 .recommendation-search {
@@ -497,29 +497,40 @@ color: #00985B;
 /* Ends */
 
 .recommendation-secondcontainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: #F3FFF4;
-    row-gap: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    
 }
 
 .recommendation-card {
     display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #fff;
-    justify-self: center;
     padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    min-width: 380px;
+    max-width: 400px;
+    
 }
 .recommendation-card:hover {
     background: linear-gradient(150.86deg, #00985B -2.67%, #00985B 56.48%, #000000 113.25%);
     color: #fff;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .recommendation-card > img {
-    width: 351.16px;
-    height: 280px;  
+    /* width: 351.16px;
+    height: 280px;   */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
 }
 .recommendation-carddetails{
     display: flex;
@@ -527,38 +538,47 @@ color: #00985B;
     margin-bottom: 19px;
 }
 .recommendation-carddetails > h4{
-    font-family: Poppins;
+    font-family:  Poppins, sans-serif;
     font-size: 24px;
     font-weight: 600;
     line-height: 36px;
     text-align: left;
+    margin: 0 0 10px 0;
     color: #000;
 }
 .recommendation-carddetails > p{
-    font-family: Poppins;
+    font-family:  Poppins, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
     text-align: left;
+    margin: 0 0 10px 0;
     color: #000;
 }
 
+/* .recommendation-card:hover .recommendation-carddetails > h4,
+.recommendation-card:hover .recommendation-carddetails > p {
+    color: #fff;
+} */
+
 .inner-carddetails{
     display: flex;
-    gap: 30px;
+    /* gap: 30px; */
+    justify-content: space-between;
 }
 .innerdetails-content{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .innerdetails-content > p{
-    font-family: Poppins;
-font-size: 12px;
-font-weight: 400;
-line-height: 18px;
-text-align: center;
-color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    color: #000;
+    margin: 0;
 }
 
 .innerdetails-image {
@@ -566,6 +586,7 @@ color: #000;
     justify-content: flex-start;
     align-items: center;
     gap: 5px; 
+    margin-bottom: 5px;
 }
 .innerdetails-image > img {
     width: 15px;
@@ -578,7 +599,13 @@ color: #000;
     line-height: 21px;
     text-align: center;
     color: #000;
+    margin: 0;
 }
+
+/* .recommendation-card:hover .innerdetails-image > p,
+.recommendation-card:hover .innerdetails-content > p {
+    color: #fff;
+} */
 
 .loadmore {
     display: flex;
@@ -625,7 +652,7 @@ margin: 50px 0;
     font-family: Poppins;
     font-size: 15px;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 5px;
     text-align: center;
     color: #fff;
     width: 138px;
@@ -633,6 +660,7 @@ margin: 50px 0;
     background: #00985B;
     border: 0;
     border-radius: 15px;
+    margin-top: 15px;
 }
 
 .features-image {
@@ -777,10 +805,9 @@ text-align: left;
     display: flex;
     justify-content: space-between;
     background-color: #000;
-    padding: 20px 40px;
+    padding: 10px 40px;
     color: #fff;
     width: 100%;
-
 
 }
 .first-footer{
@@ -788,16 +815,20 @@ text-align: left;
     justify-content: space-around;
     align-items: center;
     background-color: #000;
-    gap: 20px;
+    gap: 30px;
 }
 .footer > img{
     width: auto;
     height: 20px;
 }
 
+.footer > p {
+    margin-top: 20px;
+}
+
 .homify-nav > ul,  .footer-nav ul{
     display: flex;
-    gap: 20px;
+    gap: 30px;
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -1072,6 +1103,7 @@ screen and (max-width: 768px) and (orientation: landscape) {
         margin-top: 10px;
     }
 }
+
 
 /* Login */
 
