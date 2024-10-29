@@ -1,15 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../index.css'
 import Logo from '../assets/logo.png'
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+
 
 
 const Login = () => {
   const navigate = useNavigate();
+  const serverUrl = 'http://localhost:5000/api/signin';
 
-  function goToNextPage(){
-    navigate('/dashboard')
+  const [formData, setFormData] = useState({email: '', password: ''})
+
+  const handleChange = (e) => {
+   
+    const {name, value} = e.target;
+    setFormData({...formData, [name]: value})
+
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(serverUrl, formData)
+      if(response.data.message ==='Error, user not found'){
+        alert('Error, user not found')
+      }
+      if(response.data.message ==='Wrong Password, The password you entered is wrong'){
+        alert('Wrong Password, The password you entered is wrong')
+      }
+      if(response.data.message === 'Login successful') {
+        alert('Successfully logged in')
+
+        setTimeout(() => {
+          navigate('/dashboard');
+        }, 2000);
+      }
+    } catch (error) {
+      alert(error)
+    }
   }
   return (
     <div className="login-reg-container">
@@ -24,19 +55,19 @@ const Login = () => {
     <div className="form-wrapper">
       <div className="form-content">
         <h1>Sign In to Homify</h1>
-        <form id="signinForm">
+        <form id="signinForm" onSubmit={handleSubmit}>
           <div className="input-group">
             <label for="email">Email</label>
-            <input type="email" id="email" required />
+            <input onChange={handleChange} type="email" id="email" required />
           </div>
           <div className="input-group">
             <label for="password">Password</label>
-            <input type="password" id="password" required />
+            <input onChange={handleChange} type="password" id="password" required />
           </div>
           <div className="forgot-password">
             <a href="#" id="forgotPassword">Forgot Password?</a>
           </div>
-          <button onClick={goToNextPage} type="submit" id="sign-in">Sign In</button>
+          <button  type="submit" id="sign-in">Sign In</button>
           <div className="or-divider">
             <span>OR</span>
           </div>

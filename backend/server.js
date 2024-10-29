@@ -54,7 +54,24 @@ app.post('/api/register', async(req, res) => {
 })
 
 app.post('/api/signin', async(req, res)=> {
-    
+    try {
+        const {email, password} = req.body;
+        const userResult = await db.query("SELECT * FROM users WHERE email = $1", [email])
+        if (userResult.rows.length === 0){
+            return res.json({message: 'Error, user not found'})
+        }
+
+        const user = userResult.rows[0];
+
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+
+        if(!isPasswordValid){
+            return res.json({message: 'Wrong Password, The password you entered is wrong'})
+        }
+        res.json({ message: 'Login successful', user: { id: user.id, name: user.name, email: user.email, role: user.role } });
+    } catch (error) {
+        
+    }
 })
 
 
