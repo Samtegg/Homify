@@ -33,6 +33,10 @@ button:hover {
     cursor: pointer;
 }
 
+h1, h2 {
+	margin: 0;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -40,7 +44,6 @@ html {
 body{
     width: 100%;
     color: #fff;
-
 }
 
 .homify-container {
@@ -104,24 +107,37 @@ margin: 0 10px;
     transform: translateY(-2px);
 }
 
+.second-nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .reg {
     background-color: transparent;
     color: #fff;
     padding: 5px 10px;
-    border-radius: 3px;
+    border-radius: 2px;
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: left;
+	margin: 0 25px;
     transition: transform 0.2s ease;
-}
+} 
+
 .login {
     background-color: #fff;
     color: #00985B;
     padding: 5px 10px;
     margin-right: 35px;
-    border-radius: 3px;
+    border-radius: 2px;
     font-weight: 700;
     font-family: Poppins !important;
 }
 
-.reg:hover, .login:hover {
+.register-button:hover, .login:hover {
     /* background-color: #11d184; */
     /* background-color: #f2fff3; */
     background-color: #F3FFF4;
@@ -201,6 +217,7 @@ margin: 0 10px;
 
 .hero-button {
     background-color: #fff;
+    color: #000;
     padding: 10px 20px;
     border: 0;
     border-radius: 5px;
@@ -824,7 +841,7 @@ text-align: left;
 
 .homify-nav > ul,  .footer-nav ul{
     display: flex;
-    gap: 30px;
+    gap: 20px;
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -1102,7 +1119,7 @@ screen and (max-width: 768px) and (orientation: landscape) {
 
 
 
-/* ----- Login  and Register----- */
+/* ----- Login  and Register Styles----- */
 
   .forgot-password {
 	text-align: right;
@@ -1375,13 +1392,13 @@ screen and (max-width: 768px) and (orientation: landscape) {
 
 
 
-  /* Dashboard css */
+  /* ----- Dashboard Styles ----- */
   .margin-top{
     margin-top: 80px;
   }
+
   .dash-anchor  {
     display: flex;
-    gap: 10px;
     align-items: center;
     transition: color 0.3s, transform 0.3s;
 	font-family: Poppins;
@@ -1389,32 +1406,25 @@ screen and (max-width: 768px) and (orientation: landscape) {
 	font-weight: 700;
 	line-height: 24px;
 	text-align: left;
-	margin: 0 10px;
+    padding: 0 3px;
+	margin: 0 -10px;
 }
 
-
-
-.reg {
-    background-color: transparent;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 2px;
-	font-family: Poppins;
-	font-size: 16px;
-	font-weight: 700;
-	line-height: 24px;
-	text-align: left;
-	margin: 0 10px;
+.account-img{
+	width: auto;
+	height: 20px !important;
+}
+.acc-img1{
+    filter: invert(1);
 }
 
-
-h1, h2 {
-	margin: 0;
+.dash-anchor:hover {
+    color: #0ee68f;
 }
+/* .dash-anchor:hover .acc-img1 {
+    filter: brightness(0) saturate(100%) invert(57%) sepia(77%) saturate(579%) hue-rotate(74deg) brightness(97%) contrast(91%);
+} */
 
-.toggle-button {
-    display: none;
-}
 
 
 

@@ -26,7 +26,7 @@ const Header = () => {
                         </ul>
                         <ul className="second-nav">
                             <Link to="/register">
-                                <li className="reg"><a href="./register/register.html" >REGISTER</a></li>
+                                <li className="reg register-button"><a href="./register/register.html" >REGISTER</a></li>
                             </Link>
                             <Link to="/login">
                                 <li className="login"><a href="./login-signup/login.html" >LOGIN</a></li> 
