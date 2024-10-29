@@ -14,7 +14,7 @@ const Login = () => {
   return (
     <div className="login-container">
     <div className="logo-container">
-      <a href="../index.html"><img src={Logo} alt="Homify Logo" className="logo" /></a>
+      <a href=""><img src={Logo} alt="Homify Logo" className="logo" /></a>
     </div>
     <div className="content-wrapper">
       <h2>Simplify house hunting today.</h2>
@@ -36,7 +36,7 @@ const Login = () => {
           <div className="forgot-password">
             <a href="#" id="forgotPassword">Forgot Password?</a>
           </div>
-          <button onClick={goToNextPage} type="submit" id="sign-in" onclick="window.location.href='../user-dashboard/userdash.html'">Sign In</button>
+          <button onClick={goToNextPage} type="submit" id="sign-in">Sign In</button>
           <div className="or-divider">
             <span>OR</span>
           </div>
@@ -45,7 +45,7 @@ const Login = () => {
             <button type="button" className="social-btn facebook-btn">Sign in with Facebook</button>
           </div>
           <Link to='/register'>
-            <p className="message">Don't have an account? <a href="../register/register.html">Register</a></p>
+            <p className="message">Don't have an account? <a href="">Register</a></p>
           </Link>
   
         </form>

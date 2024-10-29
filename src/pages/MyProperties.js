@@ -1,8 +1,8 @@
 import React from 'react'
 import '../index.css';
-import DashboardHeader from '../components/DashboardHeader'
-import Footer from '../components/Footer'
-import PersonalProperties from '../components/PersonalProperties'
+import DashboardHeader from '../components/DashboardHeader.js'
+import Footer from '../components/Footer.js'
+import PersonalProperties from '../components/PersonalProperties.js'
 
 const MyProperties = () => {
   return (

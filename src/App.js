@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Dashboard from './pages/Dashboard';
-import LandingPage from './pages/LandingPage';
-import Login from './pages/Login';
-import MyProperties from './pages/MyProperties';
-import Notification from './pages/Notification';
-import Profile from './pages/Profile';
-import Register from './pages/Register';
-import TopListing from './pages/TopListing';
+import Dashboard from './pages/Dashboard.js';
+import LandingPage from './pages/LandingPage.js';
+import Login from './pages/Login.js';
+import MyProperties from './pages/MyProperties.js';
+import Notification from './pages/Notification.js';
+import Profile from './pages/Profile.js';
+import Register from './pages/Register.js';
+import TopListing from './pages/TopListing.js';
 
 
 

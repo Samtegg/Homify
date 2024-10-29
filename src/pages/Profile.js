@@ -1,7 +1,7 @@
 import React from 'react'
 import Human from '../assets/human-img2.jpg'
-import DashboardHeader from '../components/DashboardHeader'
-import Footer from '../components/Footer'
+import DashboardHeader from '../components/DashboardHeader.js'
+import Footer from '../components/Footer.js'
 
 const Profile = () => {
   return (
