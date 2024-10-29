@@ -12,7 +12,7 @@ const Login = () => {
     navigate('/dashboard')
   }
   return (
-    <div className="login-container">
+    <div className="login-reg-container">
     <div className="logo-container">
       <a href=""><img src={Logo} alt="Homify Logo" className="logo" /></a>
     </div>
