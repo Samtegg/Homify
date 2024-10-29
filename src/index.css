@@ -1411,7 +1411,6 @@ screen and (max-width: 768px) and (orientation: landscape) {
     max-width: 80%;
   }
 
-
   .dash-anchor  {
     display: flex;
     align-items: center;
@@ -1442,7 +1441,7 @@ screen and (max-width: 768px) and (orientation: landscape) {
 
 
 
-
+/* User Profile*/
 .user-overview {
 	background-color: var(--white);
 	border-radius: 8px;
