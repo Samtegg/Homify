@@ -64,7 +64,7 @@ const PersonalProperties = () => {
 
     return (
         <div className='personal-properties-container margin-top'>
-            <section id="seller-section" className="dashboard-section margin-top2">
+            <section id="seller-section" className="property-container margin-top2">
                 <h2 className='margin-top'>My Properties</h2>
                 <button onClick={openModal} className="upload-btn">Upload New Property</button>
                 <PersonalPropertiesModal isOpen={isModalOpen} onClose={closeModal} />

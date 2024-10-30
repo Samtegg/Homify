@@ -14,7 +14,7 @@ const NotificationComp = () => {
     
   return (
     <div className='personal-properties-container margin-top'>
-        <section class="notification-bar margin-top3">
+        <section class="notification-bar margin-top2">
             <h3>Notifications</h3>
             <ul class="notifications" id="notifications">
                 {
