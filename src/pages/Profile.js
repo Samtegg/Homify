@@ -9,7 +9,7 @@ const Profile = () => {
      <div className='dashboard-container'>
       <DashboardHeader />
       <section className="user-overview margin-top2">
-              <div className="user-info margin-top2">
+              <div className="user-info">
                   <div className="profile-picture-container">
                       <img id="profile-picture" src={Human} alt="human_image" className="profile-picture" />
                       <button className="change-picture-btn" >Change Profile Picture</button>

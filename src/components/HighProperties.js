@@ -51,7 +51,7 @@ const HighProperties = () => {
 
   return (
         <div className='personal-properties-container margin-top'>
-            <section class="dashboard-section margin-top">
+            <section class="property-container margin-top2">
                 <h2>Top Listings</h2>
                 <ul class="property-list" id="top-listings">
                     {
@@ -60,9 +60,9 @@ const HighProperties = () => {
                                 <img src={top.image} alt={top.name} className="property-image" />
                                 <div class="property-details">
                                     <h3>{top.name}</h3>
-                                    <p>Location: {top.location}</p>
-                                    <p>Type: {top.type}</p>
-                                    <p>Price: ${top.price}</p>
+                                    <p><strong>Location: </strong>{top.location}</p>
+                                    <p><strong>Type:</strong> {top.type}</p>
+                                    <p><strong>Price:</strong> {top.price}</p>
                                     <p>{top.description}</p>
                                 </div>
 
