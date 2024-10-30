@@ -5,6 +5,8 @@ import recommendation2 from '../assets/recommendation2.png';
 import recommendation3 from '../assets/recommendation3.png';
 import recommendation4 from '../assets/recommendation4.png';
 import recommendation5 from '../assets/recommendation5.png';
+import PersonalPropertiesModal from './PersonalPropertiesModal.js';
+import { useState } from 'react';
 
 const PersonalProperties = () => {
     const properties = [
@@ -55,11 +57,17 @@ const PersonalProperties = () => {
         }
     ];
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <div className='personal-properties-container margin-top'>
             <section id="seller-section" className="dashboard-section margin-top2">
                 <h2 className='margin-top'>My Properties</h2>
-                <button className="upload-btn">Upload New Property</button>
+                <button onClick={openModal} className="upload-btn">Upload New Property</button>
+                <PersonalPropertiesModal isOpen={isModalOpen} onClose={closeModal} />
                 <ul className="property-list" id="property-list">
                     {properties.map(property => (
                         <li key={property.id}>

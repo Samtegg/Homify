@@ -74,6 +74,33 @@ app.post('/api/signin', async(req, res)=> {
     }
 })
 
+app.post('/api/properties', async (req, res) => {
+    try {
+        const { 
+            name_of_property, 
+            address, 
+            price, 
+            image, 
+            type_of_property, 
+            transaction, 
+            bedroom, 
+            bathroom, 
+            house_area 
+        } = req.body;
+
+        const result = await db.query(
+            `INSERT INTO properties (name_of_property, address, price, image, type_of_property, transaction, bedroom, bathroom, house_area) 
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *`, 
+            [name_of_property, address, price, image, type_of_property, transaction, bedroom, bathroom, house_area]
+        );
+
+        res.json({ message: 'Property saved successfully', data: result.rows[0] });
+        
+    } catch (error) {
+        console.error('Error saving property', error);
+        res.status(500).json({ message: 'Error saving property', error: error.message });
+    }
+});
 
 
 app.listen(port, () => {
