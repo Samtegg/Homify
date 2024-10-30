@@ -3,16 +3,18 @@ import axios from 'axios';
 import '../index.css';
 
 const PersonalPropertiesModal = ({ isOpen, onClose }) => {
+  const serverUrl = 'http://localhost:5000/api/properties';
+
   const [formData, setFormData] = useState({
     name_of_property: "",
     address: "",
-    price: "",
+    price: 0,
     type_of_property: "",
     transaction: "",
-    bedroom: "",
-    bathroom: "",
-    house_area: "",
-    image: null // Use null to represent no file selected initially
+    no_bedroom: 0,
+    no_bathroom: 0,
+    house_area: 0,
+    image: "" 
   });
 
   const [error, setError] = useState(null);
@@ -27,24 +29,25 @@ const PersonalPropertiesModal = ({ isOpen, onClose }) => {
   };
 
   const handleFileChange = (e) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      image: e.target.files[0] // Capture the file object
-    }));
+    const file = e.target.files[0];
+ 
+  
+      setFormData((prevData) => ({
+        ...prevData,
+        image: file
+      }));
+
+  
+   
   };
 
   const handleSave = async () => {
     const data = new FormData();
-    for (const key in formData) {
-      data.append(key, formData[key]);
-    }
-
+    Object.entries(formData).forEach(([key, value]) => {
+        data.append(key, value);
+    });
     try {
-      const response = await axios.post('/api/properties', data, {
-        headers: {
-          'Content-Type': 'multipart/form-data' // Set the header for file upload
-        }
-      });
+      const response = await axios.post(serverUrl, data);
       console.log('Response data:', response.data);
       onClose();
     } catch (error) {
@@ -156,24 +159,24 @@ const PersonalPropertiesModal = ({ isOpen, onClose }) => {
             </div>
             <div className="three-forms">
               <div className="form_element">
-                <label className="form-label" htmlFor="bedroom">Bedrooms</label>
+                <label className="form-label" htmlFor="no_bedroom">Bedrooms</label>
                 <input
                   className="modal-input"
                   type="number"
-                  id="bedroom"
-                  name="bedroom"
-                  value={formData.bedroom}
+                  id="no_bedroom"
+                  name="no_bedroom"
+                  value={formData.no_bedroom}
                   onChange={handleChange}
                 />
               </div>
               <div className="form_element">
-                <label className="form-label" htmlFor="bathroom">Bathrooms</label>
+                <label className="form-label" htmlFor="no_bathroom">Bathrooms</label>
                 <input
                   className="modal-input"
                   type="number"
-                  id="bathroom"
-                  name="bathroom"
-                  value={formData.bathroom}
+                  id="no_bathroom"
+                  name="no_bathroom"
+                  value={formData.no_bathroom}
                   onChange={handleChange}
                 />
               </div>

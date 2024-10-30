@@ -2,28 +2,27 @@ import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
 import cors from "cors";
-import pg from "pg"
+import db from './database.js';
 import bcrypt from 'bcrypt';
+import path from 'path';
+import formidable from 'formidable';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+import multer from 'multer';
 
 
 const app = express();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const port = 5000;
 
-const db = new pg.Client({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'homify',
-    password: '1234',
-    port: 5432
-})
-
-db.connect();
 
 
 app.use(cors())
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: '10mb' })); 
+app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 
 
 
@@ -74,34 +73,58 @@ app.post('/api/signin', async(req, res)=> {
     }
 })
 
-app.post('/api/properties', async (req, res) => {
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+       return cb(null, './uploads'); 
+    },
+    filename: (req, file, cb) => {
+        return cb(null, `${Date.now()}-${file.originalname}`); 
+    }
+});
+
+const upload = multer({ storage: storage });
+
+app.use(express.json());
+
+app.post('/api/properties', upload.single('image'), async (req, res) => {
+    console.log(req.body);
+    
+    
     try {
         const { 
             name_of_property, 
             address, 
             price, 
-            image, 
             type_of_property, 
             transaction, 
-            bedroom, 
-            bathroom, 
+            no_bedroom, 
+            no_bathroom, 
             house_area 
         } = req.body;
 
+
+        const parsedPrice = isNaN(parseFloat(price)) ? 0 : parseFloat(price); 
+        const parsedNoBedroom = isNaN(parseInt(no_bedroom)) ? 0 : parseInt(no_bedroom);
+        const parsedNoBathroom = isNaN(parseInt(no_bathroom)) ? 0 : parseInt(no_bathroom);
+        const parsedHouseArea = isNaN(parseInt(house_area)) ? 0 : parseInt(house_area);
+
+        const imagePath = req.file ? req.file.path : null;
+        console.log('imagePath', imagePath);
+        
+
         const result = await db.query(
-            `INSERT INTO properties (name_of_property, address, price, image, type_of_property, transaction, bedroom, bathroom, house_area) 
+            `INSERT INTO properties (name_of_property, address, price, image, type_of_property, transaction, no_bedroom, no_bathroom, house_area) 
             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *`, 
-            [name_of_property, address, price, image, type_of_property, transaction, bedroom, bathroom, house_area]
+            [name_of_property, address, parsedPrice, imagePath, type_of_property, transaction, parsedNoBedroom, parsedNoBathroom, parsedHouseArea]
         );
 
         res.json({ message: 'Property saved successfully', data: result.rows[0] });
         
     } catch (error) {
-        console.error('Error saving property', error);
+        console.error('Error saving property:', error);
         res.status(500).json({ message: 'Error saving property', error: error.message });
     }
 });
-
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
