@@ -440,8 +440,9 @@ color: #fff;
 /* starts */
 .recommendation-searchcontaiiner {
     display: flex;
-    width: 100%;
+    width: 80%;
     justify-content: space-between;
+    margin-left: 10%;
     padding: 5px 100px !important;
     gap: 5px;
 }
@@ -971,6 +972,7 @@ screen and (max-width: 768px) and (orientation: landscape) {
         flex-direction: column;
         align-items: center;
         padding: 0 15px;
+        max-width: 80%
     }
 
     .recommendation-search {
@@ -1116,6 +1118,8 @@ screen and (max-width: 768px) and (orientation: landscape) {
         margin-top: 10px;
     }
 }
+
+
 
 
 
@@ -1403,12 +1407,16 @@ screen and (max-width: 768px) and (orientation: landscape) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(./assets/first-background.png);
-    background-color: #F3FFF4
+    background-color: #F3FFF4;
   }
 
   .dashcontainer-child {
-    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    /* border: 2px solid red; */
   }
 
   .dash-anchor  {
@@ -1421,7 +1429,7 @@ screen and (max-width: 768px) and (orientation: landscape) {
 	line-height: 24px;
 	text-align: left;
     padding: 0 3px;
-	margin: 0 -10px;
+	margin: 0 -20px;
 }
 .dash-anchor:hover {
     color: #0ee68f;
@@ -1429,7 +1437,7 @@ screen and (max-width: 768px) and (orientation: landscape) {
 
 .account-img{
 	width: auto;
-	height: 20px !important;
+	height: 20px;
 }
 .acc-img1{
     filter: invert(1);
@@ -1441,87 +1449,85 @@ screen and (max-width: 768px) and (orientation: landscape) {
 
 
 
-/* User Profile*/
-.user-overview {
-	background-color: var(--white);
-	border-radius: 8px;
-	padding: 20px;
-	margin-bottom: 20px;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-
-}
-
-.user-info {
-    display: flex;
-    flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.user-details {
-	display: flex;
-    flex-direction: column;
-	align-items: center;
-}
-
-.profile-picture-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-picture {
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	object-fit: cover;
-	margin-right: 20px;
-}
-
-.logout-btn, .upload-btn, .change-picture-btn, .edit-btn {
-	background-color: var(--light-green);
-	color: var(--white);
-	border: none;
-	padding: 10px 20px;
-	border-radius: 4px;
-	cursor: pointer;
-	font-size: 16px;
-	margin-top: 10px;
-	transition: background-color 0.3s ease;
-}
-
-.logout-btn:hover, .upload-btn:hover, .change-picture-btn:hover, .edit-btn:hover {
-	background-color: var(--dark-green);
-}
-
-.dashboard-section {
-	/* background-color: var(--white); */
-	border-radius: 8px;
-	padding: 20px;
-	margin-bottom: 20px;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-
+/* ----- Property & Top-Listing Styles -----*/
 .margin-top{
-	margin-top: 40px;
+	margin-top: 10px;
 }
-
 .margin-top2{
 	margin-top: 80px;
 }
+
+.personal-properties-container {
+    /* border: 2px solid red; */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.property-container{
+	border-radius: 8px;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+    width: 90%;
+    /* border: 2px solid red; */
+    font-family: Poppins, sans-serif;
+
+}
+
+.property-container > h2{
+    margin-top: 0px;
+    color: #000;
+}
+
+.upload-btn {
+    width: auto;
+	background-color: var(--primary-green);
+   
+}
+
 .property-list, .transaction-list {
 	list-style-type: none;
 	padding: 0;
+    /* border: 2px solid red; */
 }
 
 .property-list li, .transaction-list li {
 	border-bottom: 1px solid var(--gray);
+    border-top: 1px solid var(--gray);
 	padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid blue; */
 }
 
-.property-item {
+.property-image {
+	width: 250px;
+	height: 200px;
+	object-fit: cover;
+	margin-right: 20px;
+	border-radius: 4px;
+}
+
+.property-details {
+	flex-grow: 1;
+}
+.property-details > h3 {
+	font-size: 20px;
+}
+.property-details > p {
+	color: #000;
+}
+
+.property-name{
+    font-size: 15px;
+    color: #000;
+}
+
+/* .property-item {
 	display: flex;
 	align-items: flex-start;
 	margin-bottom: 20px;
@@ -1533,48 +1539,107 @@ screen and (max-width: 768px) and (orientation: landscape) {
 .property-item:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.property-image {
-	width: 50px;
-	height: 100px;
-	object-fit: cover;
-	margin-right: 20px;
-	border-radius: 4px;
-}
-
-.property-details {
-	flex-grow: 1;
-}
+} */
 
 .property-description {
 	margin-top: 10px;
 	font-style: italic;
-	color: #666;
+	color: #666 !important;
 }
 
 .property-actions {
 	display: flex;
-	justify-content: flex-end;
-	margin-top: 10px;
+	justify-content: flex-start;
+	margin-top: 5px;
 }
-
-.upload-btn {
-	background-color: var(--primary-green);
-}
-
 .edit-btn {
 	background-color: var(--primary-green);
-	margin-left: 10px;
+	/* margin-left: 10px; */
+    width: auto;
 }
 
+
+
+
+
+/* ----- User Profile Style ----- */
+.user-overview {
+    width: 50%;
+	background-color: var(--white);
+	border-radius: 8px;
+	padding: 20px;
+	margin-bottom: 50px;
+    margin-top: 110px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: Poppins, sans-serif;
+    /* border: 2px solid red; */
+
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile-picture-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture {
+	width: 125px;
+	height: 125px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: 20px;
+}
+
+.user-details {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+    color: #000;
+    line-height: 2rem;
+}
+
+
+.logout-btn, .upload-btn, .change-picture-btn, .edit-btn {
+	background-color: var(--light-green);
+	color: var(--white);
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 15px;
+	margin-top: 10px;
+	transition: background-color 0.3s ease;
+}
+.logout-btn:hover, .upload-btn:hover, .change-picture-btn:hover, .edit-btn:hover {
+	background-color: var(--dark-green);
+}
+
+.edit-profile-btn, .logout-btn {
+    font-size: 14px;
+    width: 80%;
+    margin-top: 10px;
+}
+
+
+
+
+/* ----- Notification Style*/
 .notification-bar {
+    width: 90%;
+    font-family: Poppins, sans-serif;
 	background-color: var(--light-green);
 	color: var(--white);
 	padding: 10px;
 	border-radius: 4px;
 	margin-bottom: 150px;
-    margin-top: 120px;
 }
 
 .notifications {
@@ -1594,16 +1659,4 @@ screen and (max-width: 768px) and (orientation: landscape) {
 	color: var(--dark-gray);
 }
 
-.account-img{
-	width: auto;
-	height: 15px;
-}
-
-/* Personal Properties */
-.property-name{
-    font-size: 15px;
-    color: #000;
-}
-
-/* Notification */
 
