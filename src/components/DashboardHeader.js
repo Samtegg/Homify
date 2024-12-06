@@ -27,6 +27,9 @@ const DashboardHeader = () => {
             </a>
            
             <ul className="second-nav">
+                <Link to=''>
+                  <li className="reg"><a className="dash-anchor" href=" ">COMMUNITY</a></li>
+                </Link>
                 <Link to='/myproperties'>
                   <li className="reg"><a className="dash-anchor" href="./myproperties.html">MY PROPERTIES</a></li>
                 </Link> 

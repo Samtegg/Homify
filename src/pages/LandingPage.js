@@ -1,5 +1,6 @@
 import React from 'react'
 import '../index.css'
+// import Userdash from '../pages/Dashboard'
 import Header from '../components/Header.js'
 import Footer from '../components/Footer.js'
 import Newproperty from '../assets/newproperty.png'
@@ -34,8 +35,8 @@ const LandingPage = () => {
             <Header />
            
                 <div class="homify-herosection" id="home">
-                    <h1>Homify Helping to Find <br /> the Dream Home.</h1>
-                    <p>Homify is here to find the best house for you,<br/> whether for sale or rent, with reliable sources.</p>
+                    <h1>ProptyBridge Helping to Find <br /> the Dream Home.</h1>
+                    <p>ProptyBridge is here to find the best house for you,<br/> whether for sale or rent, with reliable sources.</p>
                     <div class="hero-buttoncontainer">
                     <Link to='/register'>
                         <button class="hero-button"><a href="#recommendation">Find a House</a></button>
@@ -321,7 +322,7 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div class="loadmore">
-                    <p><a href="./user-dashboard/userdash.html">Load More...</a></p>
+                    <p><Link to='/dashboard'><a href="./user-dashboard/userdash.html">Load More...</a></Link></p>
                 </div>
             </div>
 
@@ -367,14 +368,14 @@ const LandingPage = () => {
                         </div>
                         <div class="contact-info">
                             <img src={Emailicon} alt="" />
-                            <a href=""><p>homify@gmail.com</p></a>
+                            <a href=""><p>ProptyBridge@gmail.com</p></a>
                         </div>
                     </div>
                     <div class="contact-image">
                         <a href=""><img src={Facebookicon} /></a>
                         <a href=""><img src={Twittericon} /></a>
                         <a href=""><img src={Instagramicon} /></a>
-                        <a href=""><p>Homify</p></a>
+                        <a href=""><p>ProptyBridge</p></a>
                     </div>
                 </div>
                 

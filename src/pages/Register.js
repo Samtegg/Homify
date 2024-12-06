@@ -74,11 +74,11 @@ const Register = () => {
     </div>
     <div className="content-wrapper">
       <h2>Simplify house hunting today.</h2>
-      <p>Homify is your go-to real estate platform, connecting property seekers in Lagos, Nigeria, with property owners and agents.</p>
+      <p>ProptyBridge is your go-to real estate platform, connecting property seekers in Lagos, Nigeria, with property owners and agents.</p>
     </div>
     <div className="form-wrapper">
       <div className="form-content">
-        <h1>Create Your Homify Account</h1>
+        <h1>Create Your Account</h1>
         <form id="registerForm" onSubmit={handleSubmit}>
           <div className="input-group">
             <label htmlFor="name">Full Name</label>
@@ -108,13 +108,13 @@ const Register = () => {
               <option value="agent">Agent</option>
             </select>
           </div>
-          <button type="submit" id="register-btn">Register</button>
+          <button type="submit" id="register-btn"><Link to='/dashboard'><a>Register</a></Link></button>
           <div className="social-login">
             <button type="button" className="social-btn google-btn">Register with Google</button>
             <button type="button" className="social-btn facebook-btn">Register with Facebook</button>
           </div>
           <Link to='/login'>
-            <p className="message">Already have an account? Sign In</p>
+            <p className="message">Already have an account? <a href="">Sign In</a></p>
           </Link>
         </form>
       </div>

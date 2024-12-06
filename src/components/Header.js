@@ -13,6 +13,7 @@ const Header = () => {
                         <Link to="/">
                             <a href="/index.html"><img className="logo" src={Logo} alt="Homify Logo" /></a>
                         </Link>
+                        
                         <a href="#" className="toggle-button">
                             <span className="bar"></span>
                             <span className="bar"></span>
@@ -21,6 +22,7 @@ const Header = () => {
                         <ul className="first-nav">
                             <li><a href="#home">HOME</a></li>
                             <li><a href="#services">SERVICES</a></li>
+                            <li><a href="#services">COMMUNITY</a></li>
                             <li><a href="#features">FEATURES</a></li>
                             <li><a href="#contact">CONTACT</a></li>
                         </ul>

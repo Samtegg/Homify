@@ -54,12 +54,12 @@ const Login = () => {
     </div>
     <div className="content-wrapper">
       <h2>Simplify house hunting today.</h2>
-      <p>Homify is your go-to real estate platform, connecting property seekers in Lagos, Nigeria, with property owners and agents.</p>
+      <p>ProptyBridge is your go-to real estate platform, connecting property seekers in Lagos, Nigeria, with property owners and agents.</p>
     </div>
 
     <div className="form-wrapper">
       <div className="form-content">
-        <h1>Sign In to Homify</h1>
+        <h1>Sign-In to your Acct </h1>
         <form id="signinForm" onSubmit={handleSubmit}>
           <div className="input-group">
             <label for="email">Email</label>
@@ -72,7 +72,7 @@ const Login = () => {
           <div className="forgot-password">
             <a href="#" id="forgotPassword">Forgot Password?</a>
           </div>
-          <button  type="submit" id="sign-in">Sign In</button>
+          <button type="submit" id="sign-in"><Link to='/dashboard'><a >Sign in</a></Link></button>
           <div className="or-divider">
             <span>OR</span>
           </div>
@@ -83,6 +83,7 @@ const Login = () => {
           <Link to='/register'>
             <p className="message">Don't have an account? <a href="">Register</a></p>
           </Link>
+
   
         </form>
       </div>
