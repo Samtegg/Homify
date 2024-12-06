@@ -81,7 +81,7 @@ const Login = () => {
             <button type="button" className="social-btn facebook-btn">Sign in with Facebook</button>
           </div>
           <Link to='/register'>
-            <p className="message">Don't have an account? <a href="">Register</a></p>
+            <p className="message">Don't have an account? <a href="./Register.js">Register</a></p>
           </Link>
   
         </form>

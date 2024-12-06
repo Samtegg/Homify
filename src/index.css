@@ -1340,13 +1340,18 @@ screen and (max-width: 768px) and (orientation: landscape) {
 	font-size: 14px;
   }
   
-  .message a {
+  .message a  {
 	color: #00985B;
 	text-decoration: none;
   }
   
-  .message a:hover {
+  /* .message a:hover {
 	text-decoration: underline;
+  } */
+
+  .message span  {
+	color: #00985B;
+	text-decoration: none;
   }
   
 

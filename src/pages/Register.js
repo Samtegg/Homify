@@ -114,7 +114,7 @@ const Register = () => {
             <button type="button" className="social-btn facebook-btn">Register with Facebook</button>
           </div>
           <Link to='/login'>
-            <p className="message">Already have an account? Sign In</p>
+            <p className="message">Already have an account? <span>Sign In</span></p>
           </Link>
         </form>
       </div>
